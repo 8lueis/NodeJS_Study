@@ -1,0 +1,239 @@
+/* #writeArea{
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    font-size: 1em;
+    resize: none;
+    border: 2px solid rgba(138, 177, 180, 0.5);
+    border-radius: 30px; */
+/* 박스의 크기를 테두리를 기준으로 */
+/* box-sizing: border-box; */
+/* focus 될 때 테두리 색상 지정 */
+/* outline-color: rgb(138, 177, 180);
+} */
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    
+    height: 700px;
+    /* font-family */
+}
+/* nav{
+    width: 100%;
+    color: #ffffff;
+    
+} */
+/* ul{ */
+    /* width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    
+    margin-left: 25%;
+}
+.tg {
+    list-style: none;
+    display: inline-block;
+    padding: 40px;
+}
+
+
+.tg:hover{
+    background-color: cornflowerblue;
+    border-radius: 60px;
+    padding: 20px;
+}
+
+.tg ul li a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+} */
+
+/* @media(max-width:768px){
+    .toggle{
+        display: block;
+    }
+    .tg{
+        width: 100%;
+        display: none;
+        margin-left: 0;
+    }
+    .tg li{
+        display: block;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+    #str1{
+        font-size: 40px;
+    }
+    .str2{
+        font-size: 10px;
+    }
+    
+    
+} */
+
+.layout {
+    width: 960px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* position: fixed;
+    overflow: hidden; */
+}
+
+#str1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.str2{
+    font-size: 20px;
+    color: #ffffff;
+}
+.titleText{
+    height: 300px;
+    padding: 20px;
+    /* margin-left: 10%; */
+    margin-top: 100px;
+}
+#soundIcon i{
+    margin: 0 3%;
+    width: 100px;
+    font-size: 50px;
+}
+
+#bth-1{
+    background-color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+    width: 200px;
+    margin-left: 40%;
+    padding: 30px 0px;
+    cursor: pointer;
+}
+
+.str{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+.article{
+    background-color: #ffffff;
+    margin: 50px 0px 10px 8%;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #747677;
+    left: 5%;
+    padding: 30px;
+    height: 230px;
+    width: 740px;
+}
+
+
+#profile{
+    display: inline-block;
+    /* justify-items: center; */
+    border-radius: 60px;
+    width: 80px;
+    height: 80px;
+    background-color: #bcc4c9;
+    padding: 10px;
+}
+
+#profile i{
+   margin: 1.4rem;
+   font-size: 40px  ;
+}
+
+
+
+
+#userName h3{
+    display: inline;
+    margin: 0 10px;
+}
+
+#question p{
+    font-size: 18px;
+    margin: 0px 0px 0px 17%;
+    font-weight: 700;
+}
+
+*{list-style: none;}
+
+.bth2{
+    margin-left: 20%;
+}
+
+.bth2 li:first-child{
+    background-color: #bcc4c967;
+    width: 150px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    margin-right: 15%;
+    /* box-shadow: 0px 4px 4px #747677; */
+    font-weight: 600;
+}
+
+.bth2 button{
+    background-color: #F1ED8F;
+    border-style: none;
+    width: 200px;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0px 4px 4px #747677;
+}
+
+.bth2 button:hover{
+    background-color: #9cb2e9;
+}
+
+
+.bth2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.bth2 li{
+    float: left;
+    margin-top: 30px;
+    
+}
+
+@media (max-width: 600px){
+    #bth-1{
+        width: 130px;
+    }
+    #bth-1 a{
+        font-size: 20px;
+    }
+    #layout{
+        width: 600px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}

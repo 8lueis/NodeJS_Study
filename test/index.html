@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link href="/community2.css" rel="stylesheet">
+</head>
+
+<body style="background-color: black; height: 1500px;">
+    <script src="https://kit.fontawesome.com/d9483ff595.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    <div class="layout">
+        <!-- <nav>
+            <div class="toggle">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>
+            <ul class="tg">
+                <li><a href="#"></a>설정</li>
+                <li><a href="#"></a>홈</li>
+                <li><a href="#"></a>마이페이지</li>
+            </ul>
+        </nav> -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <!-- <script type="text/javascript">
+            $(document).ready(function () {
+                $('.menu').click(function () {
+                    $('.tg').toggleClass('active');
+                })
+            })
+        </script> -->
+        <div class="container">
+            <div class="titleText">
+                <span id="str1">묻고<br>답해요</span>
+                <span id="soundIcon"><i class="fa-solid fa-volume-high" style="color: #ffffff;" id="playButton" alt="음성 재생 버튼" style="cursor: pointer;"></i></span>
+                <audio id="audioPlayer">
+                    <source src="/mp3/묻고 답해요.mp3" type="audio/mpeg">
+                </audio>
+                <div class="str2">어플리케이션 사용 중 궁금한 점을 질문해요</div>
+            </div>
+        </div>
+        <script>
+            const playButton = document.getElementById('playButton');
+            const audioPlayer = document.getElementById('audioPlayer');
+            playButton.addEventListener('click', ()=>{
+                audioPlayer.play();
+            })
+        </script>
+
+        <!-- 작성하기 버튼 -->
+        <div id="bth-1"><a href="/writing.html" class="str">
+                작성하기
+            </a></div>
+
+        <!-- 글  -->
+        <!-- 글이 또 업로드가 된다면 여기서부터 -->
+        <div class="article">
+            <!-- 사진 -->
+            <span id="profile">
+                <i class="fas fa-duotone fa-user"></i>
+            </span>
+
+            <!-- 유저 이름 -->
+            <span id="userName">
+                <h3>홍길동</h3>
+            </span>
+
+            <br>
+            <!--  -->
+            <span id="question">
+                <!-- 글쓰기에서 적은 내용 최소 -->
+                <p>
+                    최대 ~글자만 보이고 나머지는 안 보이는 시스템입니다
+                </p>
+            </span>
+
+            <ul class="bth2">
+                <li>댓글 3</li>
+                <li><button>
+                    <a href="#">보러 가기</a>
+                </button></li>
+            </ul>
+            
+            
+        </div>
+        <!-- 여기까지가 복붙 되면 됩니다다 -->
+       
+     
+        
+    </div>
+    <!-- <form>
+        <textarea name="writeArea" id="writeArea" cols="30" rows="10"></textarea>
+    </form> -->
+</body>
+
+</html>
