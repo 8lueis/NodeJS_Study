@@ -2,6 +2,8 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
+var path = require('path');
+const sanitize = require('sanitize-html');
 
 var template = {
   HTML:function (title, list, body, control){
@@ -62,12 +64,16 @@ var app = http.createServer(function(request,response){
       }else{
         fs.readdir('./data',function(error, filelist){
           // console.log(filelist);
-
+          var filteredId = path.parse(queryData.id).base;
               var list = template.list(filelist);
-            fs.readFile(`data/${queryData.id}`,'utf8', function(err,description){
+            fs.readFile(`data/${filteredId}`,'utf8', function(err,description){
+              var sanitizedTitle = sanitize(title);
+              var sanitizeDescription = sanitize(description,{
+                allowedTags:['h1']
+              });
           var title = queryData.id;
             var html = template.HTML(title, list,
-              `<h2>${title}</h2>${description}`,
+              `<h2>${sanitizedTitle}</h2>${sanitizeDescription}`,
               `<a href="/create">create</a>
                <a href="/update?id=${title}">update</a>
                <form action="process_delete" method="post">
@@ -114,7 +120,9 @@ var app = http.createServer(function(request,response){
 
     }else if (pathname === `/update`) {
       fs.readdir('./data',function(error, filelist){
-          fs.readFile(`data/${queryData.id}`,'utf8', function(err,description){
+        var filteredId = path.parse(queryData.id).base;
+
+          fs.readFile(`data/${filteredId}`,'utf8', function(err,description){
               var title = queryData.id;
               var list = template.list(filelist);
           var html = template.HTML(title, list,
